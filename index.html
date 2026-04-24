@@ -9,20 +9,31 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <span class="text-white fs-3">☰</span>
-  <a class="navbar-brand fs-3" href="#" style="font-family: cursive;">🧴 Fresh Body Spray</a>
-  <a class="nav-link text-white ms-4" href="#" style="color: white;">🏠 Home</a>
-<input class="form-control w-25 ms-4" type="search" placeholder="Search sprays">
-<a class="nav-link text-white ms-4" href="#" style="color: white;">🛒 Cart</a>
+
+    <a class="navbar-brand fs-3" href="#" style="font-family: cursive;">
+      🧴 Fresh Body Spray
+    </a>
+
+    <a class="nav-link text-white ms-4" href="#">🏠 Home</a>
+
+    <input class="form-control w-25 ms-4" type="search" placeholder="Search sprays">
+
+    <a class="nav-link text-white ms-4" href="#">🛒 Cart</a>
   </div>
 </nav>
 
+<!-- Hero -->
 <div class="hero text-center">
   <h1 class="mb-3"><strong>🔥 Welcome to Fresh Body Spray 2026 🔥</strong></h1>
   <p class="lead">Feel fresh, smell confident all day long ✨</p>
@@ -31,28 +42,29 @@
 
 <!-- Products -->
 <div class="container mt-5">
- <h2 class="text-center mt-4 mb-4">Our Body Sprays</h2>
-  
-  <div class="col-md-4">
+  <h2 class="text-center mt-4 mb-4">Our Body Sprays</h2>
 
-    <div class="col-md-4">
+  <!-- FIXED GRID (IMPORTANT PART) -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <!-- Ocean Breeze -->
+    <div class="col">
       <div class="card">
         <img src="images/ocean_breeze.jpg" class="card-img-top">
         <div class="card-body">
-          <h5>Ocean Breeze</h5>
-          <p>Fresh, long-lasting fragrance for all day use</p>
           <h5>Ocean Breeze <span class="badge bg-warning text-dark">NEW</span></h5>
+          <p>Fresh, long-lasting fragrance for all day use</p>
           <p><strong>Price:</strong> $25</p>
           <button class="btn btn-success btn-sm">Buy Now</button>
         </div>
       </div>
     </div>
 
-    <div class="col-md-4">
+    <!-- Night Musk -->
+    <div class="col">
       <div class="card">
         <img src="images/night_musk.jpeg" class="card-img-top">
         <div class="card-body">
-          <h5>Night Musk</h5>
           <h5>Night Musk <span class="badge bg-success">BEST SELLER</span></h5>
           <p>Strong and bold scent</p>
           <p><strong>Price:</strong> $30</p>
@@ -61,7 +73,8 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <!-- Citrus Blast -->
+    <div class="col">
       <div class="card">
         <img src="images/citrus_blast.jpg.jfif" class="card-img-top">
         <div class="card-body">
@@ -75,10 +88,13 @@
 
   </div>
 </div>
+
+<!-- Footer -->
 <footer class="bg-dark text-white text-center p-3 mt-5">
   <p>Email: support@freshspray.com</p>
   <p>Follow us: Instagram | Facebook</p>
   <p>&copy; 2026 Fresh Spray. All Rights Reserved.</p>
 </footer>
+
 </body>
 </html>
