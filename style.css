@@ -1,0 +1,27 @@
+/* Background styling */
+body {
+  background-color: #2e6caa;
+}
+
+/* Hero section */
+.hero {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #dbeafe, #e0f2fe);
+}
+
+/* Product cards */
+.card {
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Product images */
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
