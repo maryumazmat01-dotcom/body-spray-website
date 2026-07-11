@@ -105,10 +105,8 @@ body {
     .card-img-top {
         height: 240px;
     }
-}
-/* media query for mobile view */
-@media (max-width: 576px) {
+
     body {
-        background-color: lightpink !important; /* only for testing if it's working or not */
+        background-color: lightpink !important; /* testing if it's working or not */
     }
 }
