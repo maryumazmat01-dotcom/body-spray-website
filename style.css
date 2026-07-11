@@ -105,4 +105,8 @@ body {
     .card-img-top {
         height: 240px;
     }
+
+    body {
+        background-color: lightpink !important; /* testing if it's working or not */
+    }
 }
