@@ -1,100 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fresh Body Spray 2026</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Body Spray 2026</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <span class="text-white fs-3">☰</span>
-
-    <a class="navbar-brand fs-3" href="#" style="font-family: cursive;">
-      🧴 Fresh Body Spray
-    </a>
-
-    <a class="nav-link text-white ms-4" href="#">🏠 Home</a>
-
-    <input class="form-control w-25 ms-4" type="search" placeholder="Search sprays">
-
-    <a class="nav-link text-white ms-4" href="#">🛒 Cart</a>
-  </div>
-</nav>
-
-<!-- Hero -->
-<div class="hero text-center">
-  <h1 class="mb-3"><strong>🔥 Welcome to Fresh Body Spray 2026 🔥</strong></h1>
-  <p class="lead">Feel fresh, smell confident all day long ✨</p>
-  <button class="btn btn-success">Shop Now</button>
-</div>
-
-<!-- Products -->
-<div class="container mt-5">
-  <h2 class="text-center mt-4 mb-4">Our Body Sprays</h2>
-
-  <!-- FIXED GRID (IMPORTANT PART) -->
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
-    <!-- Ocean Breeze -->
-    <div class="col">
-      <div class="card">
-        <img src="images/ocean_breeze.jpg" class="card-img-top">
-        <div class="card-body">
-          <h5>Ocean Breeze <span class="badge bg-warning text-dark">NEW</span></h5>
-          <p>Fresh, long-lasting fragrance for all day use</p>
-          <p><strong>Price:</strong> $25</p>
-          <button class="btn btn-success btn-sm">Buy Now</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html" style="font-family: 'Poppins', sans-serif; font-weight: bold;">
+                🧴 Fresh Body Spray
+            </a>
+            <div class="d-flex align-items-center">
+                <a class="nav-link text-white me-3" href="index.html">🏠 Home</a>
+                <span class="text-white fs-5"><i class="fas fa-shopping-cart"></i></span>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <div class="hero text-center">
+        <h1 class="mb-3"><strong>🔥 Welcome to Fresh Body Spray 2026 🔥</strong></h1>
+        <p class="lead">Feel fresh, smell confident all day long ✨</p>
     </div>
 
-    <!-- Night Musk -->
-    <div class="col">
-      <div class="card">
-        <img src="images/night_musk.jpeg" class="card-img-top">
-        <div class="card-body">
-          <h5>Night Musk <span class="badge bg-success">BEST SELLER</span></h5>
-          <p>Strong and bold scent</p>
-          <p><strong>Price:</strong> $30</p>
-          <button class="btn btn-success btn-sm">Buy Now</button>
+    <div class="container mt-5">
+        <h2 class="text-center mt-4 mb-5 fw-bold">Our Premium Sprays Collection</h2>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/ocean_breeze.jpg" class="card-img-top" alt="Ocean Breeze">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Ocean Breeze <span class="badge bg-warning text-dark">NEW</span></h5>
+                            <p class="text-muted small">Fresh, long-lasting fragrance for all day use.</p>
+                            <p class="price">$25</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Ocean Breeze', '$25', 'images/ocean_breeze.jpg', 'A refreshing marine fragrance that captures the essence of crashing waves and cool sea breeze.', 'Sea Salt, Mint, Driftwood')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/night_musk.jpeg" class="card-img-top" alt="Night Musk">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Night Musk <span class="badge bg-success">BEST SELLER</span></h5>
+                            <p class="text-muted small">Strong and bold scent for evenings.</p>
+                            <p class="price">$30</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Night Musk', '$30', 'images/night_musk.jpeg', 'A deep, mysterious, and seductive woody musk perfume aroma designed for premium evenings.', 'Black Musk, Dark Amber, Oud')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/aqua.jpg" class="card-img-top" alt="Aqua">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Aqua Cool</h5>
+                            <p class="text-muted small">An intense splash of aquatic freshness to beat the summer heat.</p>
+                            <p class="price">$27</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Aqua Cool', '$27', 'images/aqua.jpg', 'A classic sporty scent packed with high coolness. Instant cooling formula for workout days.', 'Iced Melon, Calone, Ocean Moss')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/blue lady.jpg" class="card-img-top" alt="Blue Lady">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Blue Lady</h5>
+                            <p class="text-muted small">Elegant, soft floral scent crafted beautifully for women.</p>
+                            <p class="price">$35</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Blue Lady', '$35', 'images/blue lady.jpg', 'A classic floral fragrance crafted perfectly with deep elegance and premium powder finish for women.', 'Jasmine, African Orange Flower, Violet')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/floral fantasy.webp" class="card-img-top" alt="Floral Fantasy">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Floral Fantasy</h5>
+                            <p class="text-muted small">A magical sweet garden bloom experience that lasts all day.</p>
+                            <p class="price">$32</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Floral Fantasy', '$32', 'images/floral fantasy.webp', 'Step into a world of blooming orchards with this sweet and romantic luxury floral fantasy mist.', 'Damask Rose, Peony, Sweet Vanilla')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/fogg.jfif" class="card-img-top" alt="Fogg">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Fogg Intense</h5>
+                            <p class="text-muted small">No gas body spray formula ensuring thousands of premium sprays.</p>
+                            <p class="price">$22</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Fogg Intense', '$22', 'images/fogg.jfif', 'Highly demanded no-gas body spray system packed with rich masculine freshness that persists 24 hours.', 'Spicy Coriander, Sandalwood, Oakmoss')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/glamour.jfif" class="card-img-top" alt="Glamour">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Glamour Touch</h5>
+                            <p class="text-muted small">A shiny, rich party fragrance that turns heads wherever you go.</p>
+                            <p class="price">$38</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Glamour Touch', '$38', 'images/glamour.jfif', 'Luxurious fragrance with high-end premium notes designed specifically for luxury events and red carpets.', 'White Lily, Patchouli, Exotic Spices')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/hooked.jfif" class="card-img-top" alt="Hooked">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Hooked On</h5>
+                            <p class="text-muted small">An addictive, magnetic sweet scent perfect for modern youths.</p>
+                            <p class="price">$29</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Hooked On', '$29', 'images/hooked.jfif', 'Get everyone hooked to your magnetic vibe. Features bold sweet accords mixed with deep wood finish.', 'Tonka Bean, Caramel, Cedarwood')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/nike.jfif" class="card-img-top" alt="Nike">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Nike Active</h5>
+                            <p class="text-muted small">High performance energetic dynamic sport active deodorant spray.</p>
+                            <p class="price">$26</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Nike Active', '$26', 'images/nike.jfif', 'Designed for individuals with active sports routines. High sweat protection with refreshing lemon punch.', 'Green Apple, Bergamot, Vetiver')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/noir.jpg" class="card-img-top" alt="Noir">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Noir Dark</h5>
+                            <p class="text-muted small">Ultimate classic black night perfume statement for gentlemen.</p>
+                            <p class="price">$42</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Noir Dark', '$42', 'images/noir.jpg', 'An elite combination of raw leather and rich black woods. Defines status, boldness, and sheer luxury.', 'Leather, Black Pepper, Vetiver, Oud')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/secret.jfif" class="card-img-top" alt="Secret">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Secret Temptation</h5>
+                            <p class="text-muted small">Mysterious and mesmerizing luxury temptation scent for parties.</p>
+                            <p class="price">$40</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Secret Temptation', '$40', 'images/secret.jfif', 'A highly captivating luxury temptation scent that creates an air of mystery and pure confidence around you.', 'Rose, Gardenia, Creamy Vanilla')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/vegas lady.jfif" class="card-img-top" alt="Vegas Lady">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5>Vegas Lady</h5>
+                            <p class="text-muted small">Premium, sparkling bold notes inspired by Vegas nightlife.</p>
+                            <p class="price">$45</p>
+                        </div>
+                        <button class="btn btn-product mt-2" onclick="showDetails('Vegas Lady', '$45', 'images/vegas lady.jfif', 'Bold, premium celebrity lifestyle fragrance that makes you shine under the sparkling neon city lights.', 'White Floral, Citrus Burst, Pure Musk')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
     </div>
 
-    <!-- Citrus Blast -->
-    <div class="col">
-      <div class="card">
-        <img src="images/citrus_blast.jpg.jfif" class="card-img-top">
-        <div class="card-body">
-          <h5>Citrus Blast</h5>
-          <p>Light and energetic scent</p>
-          <p><strong>Price:</strong> $28</p>
-          <button class="btn btn-success btn-sm">Shop Now</button>
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+        <p class="mb-1">Email: support@freshspray.com</p>
+        <p class="mb-1">Follow us: Instagram | Facebook</p>
+        <p class="mb-0">&copy; 2026 Fresh Spray. All Rights Reserved.</p>
+    </footer>
+
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border-radius: 20px; overflow: hidden; border: none;">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Product Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <div id="detailsSection" class="row align-items-center">
+                        <div class="col-md-5 text-center mb-3 mb-md-0">
+                            <img id="modalImg" src="" class="img-fluid rounded shadow-sm" style="max-height: 350px; object-fit: cover; border: 1px solid #e5e7eb;">
+                        </div>
+                        <div class="col-md-7">
+                            <h2 id="modalName" class="fw-bold mb-2 text-dark">Name</h2>
+                            <h3 id="modalPrice" class="text-danger fw-bold mb-3">$0.00</h3>
+                            <p id="modalDesc" class="text-muted fs-6">Description...</p>
+
+                            <div class="p-3 bg-light rounded-3 mb-3 small">
+                                <p class="mb-1"><strong><i class="fas fa-flask text-primary"></i> Fragrance Notes:</strong> <span id="modalNotes">...</span></p>
+                                <p class="mb-1"><strong><i class="fas fa-clock text-warning"></i> Longevity:</strong> 12-24 Hours Guaranteed</p>
+                                <p class="mb-0"><strong><i class="fas fa-box text-success"></i> Volume:</strong> 150ml / 5.1 fl.oz</p>
+                            </div>
+
+                            <div class="d-flex gap-2 btn-group-custom">
+                                <button class="btn btn-cart" onclick="alert('🛒 Added to Cart successfully!')">Add to Cart</button>
+                                <button class="btn btn-buy" onclick="openCheckoutForm()">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="checkoutSection" class="d-none">
+                        <button class="btn btn-link p-0 text-decoration-none mb-3" onclick="backToDetails()"><i class="fas fa-arrow-left"></i> Back to Product</button>
+                        <h4 class="fw-bold text-dark mb-1">📋 Complete Your Order</h4>
+                        <p class="text-muted small mb-4">You are buying: <span id="checkoutItemName" class="fw-bold text-primary">Item</span> (<span id="checkoutItemPrice" class="text-danger fw-bold">Price</span>)</p>
+
+                        <form id="orderForm" onsubmit="submitOrder(event)">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label fw-semibold">Full Name *</label>
+                                    <input type="text" class="form-control" placeholder="Enter full name" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label fw-semibold">Phone Number *</label>
+                                    <input type="tel" class="form-control" placeholder="03xxxxxxxxx" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Shipping Address *</label>
+                                    <textarea class="form-control" rows="2" placeholder="House#, Street#, Area name, City" required></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Payment Method</label>
+                                    <select class="form-select">
+                                        <option value="cod">Cash on Delivery (COD)</option>
+                                        <option value="card">JazzCash / EasyPaisa / Card</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-success w-100 py-2 fw-bold rounded-pill">Place Order Now 🚀</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-  </div>
-</div>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>Email: support@freshspray.com</p>
-  <p>Follow us: Instagram | Facebook</p>
-  <p>&copy; 2026 Fresh Spray. All Rights Reserved.</p>
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Global variables to store current active perfume info
+        let currentName = '';
+        let currentPrice = '';
+
+        function showDetails(name, price, img, desc, notes) {
+            currentName = name;
+            currentPrice = price;
+
+            // Reset modal sections state back to details view
+            document.getElementById('detailsSection').classList.remove('d-none');
+            document.getElementById('checkoutSection').classList.add('d-none');
+
+            // Fill details data
+            document.getElementById('modalTitle').innerText = name + " - Premium Details";
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalNotes').innerText = notes;
+
+            // Trigger Modal open
+            var myModal = new bootstrap.Modal(document.getElementById('productModal'));
+            myModal.show();
+        }
+
+        // Switches view from product specs to Customer Details Form
+        function openCheckoutForm() {
+            document.getElementById('checkoutItemName').innerText = currentName;
+            document.getElementById('checkoutItemPrice').innerText = currentPrice;
+
+            document.getElementById('detailsSection').classList.add('d-none');
+            document.getElementById('checkoutSection').classList.remove('d-none');
+            document.getElementById('modalTitle').innerText = "Checkout - " + currentName;
+        }
+
+        // Lets customer navigate back to product information view
+        function backToDetails() {
+            document.getElementById('checkoutSection').classList.add('d-none');
+            document.getElementById('detailsSection').classList.remove('d-none');
+            document.getElementById('modalTitle').innerText = currentName + " - Premium Details";
+        }
+
+        // Handles final order confirmation action
+        function submitOrder(e) {
+            e.preventDefault();
+            alert(`🎉 Success! Your order for "${currentName}" has been placed. We will contact you soon.`);
+
+            // Reset form fields and hide modal popup box
+            document.getElementById('orderForm').reset();
+            const modalElement = document.getElementById('productModal');
+            const modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (modalInstance) {
+                modalInstance.hide();
+            }
+        }
+    </script>
 
 </body>
 </html>
